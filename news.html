@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Raed's jQuery Seite!</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="jquery-3.2.0.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            $("p").click(function() {
+                $(this).hide();
+            });
+
+
+            $('#euro').val('Euro');
+
+
+            $('#lira').val('Lira');
+
+            $("#p1").mouseenter(function() {
+                alert("what do you want!?");
+            });
+
+            var setLira = function() {
+
+                  var euro = $('#euro').val();
+
+
+                  var lira = 560*euro ; // here as to be the calculation!
+
+                  $('#lira').val(lira);
+
+                  console.log();
+
+                };
+
+
+            $('#euro').keyup(setLira)
+
+
+
+
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <form>
+        <input type="text" name="vorname"></input>
+        <input type="text" name="nachname"></input>
+        <input type="number" name="alter"></input>
+
+        <button type="submit">Abschicken</button>
+
+    </form>
+
+
+
+
+    <div id="container">
+
+        Hallo <span id="name"></span>! schön, dass du da bist
+
+    </div>
+
+    <input type="text" name="euro" id="euro"></input>
+    <input type="text" name="lira" id="lira"></input>
+
+
+    <p>Test</p>
+
+
+    <button id="button1">Click</button>
+
+    <style>
+        p1 {
+            text-align: center;
+        }
+    </style>
+
+
+    <!-- Javascript -->
+
+    <script>
+        person = {
+            name: 'Raed',
+            nachname: 'khateb',
+            alter: 19,
+            sprachen: {
+                deutsch: 'ja',
+                englisch: 'ja',
+                arabisch: 'ja',
+                japanisch: 'nein'
+            }
+        }
+
+        data = location.search.slice(1);
+        data2 = data.split('&');
+        var properties = {};
+
+        for (i = 0; i < data2.length; i = i + 1) {
+            var property = data2[i].split('=');
+            properties[property[0]] = property[1];
+        }
+
+        $('#name').html(properties.vorname);
+        $('#nachname').html(properties.nachname);
+        $('#alter').html(properties.alter);
+    </script>
+
+    <button onclick="document.getElementById('demo').innerHTML=Date()">Time now!!</button>
+
+    <p id="demo"></p>
+
+
+    <script>
+        $("#button1").click(function() {
+            $("#container").toggle();
+        });
+
+
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(30);
+            });
+        });
+
+        $(document).ready(function() {
+            $('#ab1').fadeIn();
+            $('#ab2').fadeOut();
+            $('#ab3').fadeOut();
+            $('#ab4').fadeOut();
+            $('#ab5').fadeOut();
+
+
+
+            $('#ab2Title').click(function() {
+                $('#ab1').fadeOut();
+                $('#ab2').fadeIn();
+                $('#ab3').fadeOut();
+                $('#ab4').fadeOut();
+                $('#ab5').fadeOut();
+
+
+
+            })
+
+            $('#ab1Title').click(function() {
+                $('#ab1').fadeIn();
+                $('#ab2').fadeOut();
+                $('#ab3').fadeOut();
+                $('#ab4').fadeOut();
+                $('#ab5').fadeOut();
+
+
+
+            })
+
+            $('#ab3Title').click(function() {
+                $('#ab1').fadeOut();
+                $('#ab2').fadeOut();
+                $('#ab3').fadeIn();
+                $('#ab4').fadeOut();
+                $('#ab5').fadeOut();
+
+
+
+            })
+
+            $('#ab4Title').click(function() {
+                $('#ab1').fadeOut();
+                $('#ab2').fadeOut();
+                $('#ab3').fadeOut();
+                $('#ab4').fadeIn();
+                $('#ab5').fadeOut();
+
+
+            })
+
+            $('#ab5Title').click(function() {
+                $('#ab1').fadeOut();
+                $('#ab2').fadeOut();
+                $('#ab3').fadeOut();
+                $('#ab4').fadeOut();
+                $('#ab5').fadeIn();
+
+            })
+
+        })
+    </script>
+    </head>
+
+    <body>
+
+        <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">
+Turn on the light</buttpn>
+
+<img id='myImage' src="pic_bulboff.gif" style="width:100px""height:100px">
+
+<button
+onclick="document.getElementById('myImage').src='pic_bulboff.gif'">
+Turn off the light</button>
+
+
+
+
+
+        <h1 id="ab1Title">Abschnitt 1</h1>
+        <p id="ab1">
+            Mein Name ist RAED, ich bin 19 jahre alt
+        </p>
+        <h1 id="ab2Title">Abschnitt 2</h2>
+<p id="ab2">
+ich wohne in Berlin, Rognitz str, ich komme aus Syrien
+</p>
+<h1 id="ab3Title">Abschnitt 3</h1>
+        <p id="ab3">
+            ich lerne deutsch in der schule und habe viele leute kannengelernt, sie sind wirklich freundlich und net
+        </p>
+        <h1 id="ab4Title">Abschnitt 4</h1>
+        <p id="ab4">
+            ich mache jetzt praktikum über die Programmierung und finde das interessant
+        </p>
+        <h1 id="ab5Title">Abschnitt 5</h1>
+        <p id="ab5">
+            ich möchte programmer werden
+        </p>
+
+
+        <p>deutschland flagge!!!</p>
+
+        <button>Click if you're sure </button><br><br>
+
+        <div id="div1" style="width:800px;height:80px;display:none;background-color:black;"></div><br>
+        <div id="div2" style="width:800px;height:80px;display:none;background-color:red;"></div><br>
+        <div id="div3" style="width:800px;height:80px;display:none;background-color:yellow;"></div>
+
+
+        <script>
+            $(document).ready(function() {
+                $("#flip").click(function() {
+                    $("#panel").slideToggle("slow");
+                });
+            });
+        </script>
+
+
+        <p>don't click me, I will be disappear.</p>
+        <p>click me</p>
+        <p>click me too</p>
+
+
+
+
+
+
+
+
+
+
+        <style>
+            #panel,
+            #flip {
+                padding: 50px;
+                text-align: center;
+                background-color: #e5eecc;
+                border: solid 1px #c3c3c3;
+            }
+
+            #panel {
+                padding: 50px;
+                display: grid;
+            }
+
+            #button-container {
+                text-align: center;
+            }
+        </style>
+        </head>
+
+        <body>
+
+            <div id="flip" style=c olor:red;>you won a car</div>
+            <div id="panel">
+
+                <img src='car.jpg' width="500" height="250" />
+
+            </div>
+
+            <div id="button-container">
+                <button id="p1">click me if you can.</button>
+            </div>
+
+        </body>
+
+</html>
