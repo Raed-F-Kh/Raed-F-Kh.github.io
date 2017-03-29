@@ -5,6 +5,15 @@
     <meta charset="utf-8">
     <title>Raed's jQuery Seite!</title>
 
+    <div id="myDIV"></div>
+    <ul>
+  <li class="menu"><a class="active" href="#home">Home</a></li>
+  <li class="menu"><a href="news.html">News</a></li>
+  <li class="menu"><a href="....">!!!</a></li>
+  <li  class="menu" style="float:right"><a href="#about">About</a></li>
+  </ul>
+
+
     <link rel="stylesheet" href="style.css" />
 
     <script src="jquery-3.2.0.min.js"></script>
@@ -22,9 +31,7 @@
 
             $('#lira').val('Lira');
 
-            $("#p1").mouseenter(function() {
-                alert("what do you want!?");
-            });
+
 
             var setLira = function() {
 
@@ -39,11 +46,7 @@
 
                 };
 
-
-            $('#euro').keyup(setLira)
-
-
-
+                $('#euro').keyup(setLira)
 
 
         });
@@ -65,17 +68,49 @@
 
 
 
-    <div id="container">
+    <h1 id="container">
 
         Hallo <span id="name"></span>! schön, dass du da bist
 
-    </div>
+    </h1>
+
+
+    <center>
+
+    <button style="margin:50px; font-size:150%" onclick="color()">andre farbe!!!</button>
+
+    <br>
+
+
+    </center>
+
+    <script>
+
+    function color() {
+
+      var answer = prompt('welche ist deine Lieblingsfarbe?');
+
+
+      var header = document.getElementById('header1');
+
+      header.style.backgroundColor = answer;
+
+    }
+
+    </script>
+
+
+<h1 id="header1" class="main-header">Euro-Lira Wechsel!!</h1>
 
     <input type="text" name="euro" id="euro"></input>
     <input type="text" name="lira" id="lira"></input>
 
 
     <p>Test</p>
+
+    <img src='euro_europe.jpg' width="350" height="250"/>
+    <img src='lira.jpg' width="350" height="250"/>
+
 
 
     <button id="button1">Click</button>
@@ -202,13 +237,14 @@
 
     <body>
 
-        <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">
+ <button
+ onclick="document.getElementById('myImage').src='pic_bulbon.gif'">
 Turn on the light</buttpn>
 
 <img id='myImage' src="pic_bulboff.gif" style="width:100px""height:100px">
 
-<button
-onclick="document.getElementById('myImage').src='pic_bulboff.gif'">
+ <button
+ onclick="document.getElementById('myImage').src='pic_bulboff.gif'">
 Turn off the light</button>
 
 
@@ -216,30 +252,30 @@ Turn off the light</button>
 
 
         <h1 id="ab1Title">Abschnitt 1</h1>
-        <p id="ab1">
+        <p id="ab1" style="color:red";>
             Mein Name ist RAED, ich bin 19 jahre alt
         </p>
         <h1 id="ab2Title">Abschnitt 2</h2>
-<p id="ab2">
+<p id="ab2" style="color:orange";>
 ich wohne in Berlin, Rognitz str, ich komme aus Syrien
 </p>
 <h1 id="ab3Title">Abschnitt 3</h1>
-        <p id="ab3">
+        <p id="ab3" style="color:yellow";>
             ich lerne deutsch in der schule und habe viele leute kannengelernt, sie sind wirklich freundlich und net
         </p>
         <h1 id="ab4Title">Abschnitt 4</h1>
-        <p id="ab4">
+        <p id="ab4" style="color:darkgreen";>
             ich mache jetzt praktikum über die Programmierung und finde das interessant
         </p>
         <h1 id="ab5Title">Abschnitt 5</h1>
-        <p id="ab5">
+        <p id="ab5" style="color:white";>
             ich möchte programmer werden
         </p>
 
 
-        <p>deutschland flagge!!!</p>
+        <h2>deutschland flagge!!!</h2>
 
-        <button>Click if you're sure </button><br><br>
+        <button>Click me </button><br><br>
 
         <div id="div1" style="width:800px;height:80px;display:none;background-color:black;"></div><br>
         <div id="div2" style="width:800px;height:80px;display:none;background-color:red;"></div><br>
@@ -290,16 +326,7 @@ ich wohne in Berlin, Rognitz str, ich komme aus Syrien
 
         <body>
 
-            <div id="flip" style=c olor:red;>you won a car</div>
-            <div id="panel">
 
-                <img src='car.jpg' width="500" height="250" />
-
-            </div>
-
-            <div id="button-container">
-                <button id="p1">click me if you can.</button>
-            </div>
 
         </body>
 

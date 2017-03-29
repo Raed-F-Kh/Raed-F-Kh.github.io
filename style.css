@@ -1,6 +1,6 @@
 #myDIV {
-    width: 1260px;
-    height: 300px;
+    width: 1245px;
+    height: 200px;
     background: red;
     -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
     animation: mymove 5s infinite;
@@ -32,7 +32,7 @@ padding: 100px;
 color: yellow
 }
 body {
-background-color: white;
+background-color: lightblue;
 }
 
 h1 {
@@ -86,7 +86,7 @@ text-align: left;
 
    li.menu a {
        display: block;
-       color: white;
+       color: lightblue ;
        text-align: center;
        padding: 14px 16px;
        text-decoration: none;
